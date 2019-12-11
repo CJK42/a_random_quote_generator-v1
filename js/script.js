@@ -4,7 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 // Thank you for taking the time to review my first Techdegree project! I am trying for 'Exceeds Expectations', however 
-//I am willing to accept a passing grade.
+// I am willing to accept a passing grade.
 
 
 // The quotes array contains five objects and additional categorization tags.
