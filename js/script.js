@@ -3,7 +3,7 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// Thank you for taking the time to review my first Techdegree project! I am trying for 'Exceeds Expectations', however I am willing to accept a passing grade.
+// Thank you for taking the time to review my first Techdegree project! I am aiming for 'Exceeds Expectations', however I am willing to accept a passing grade.
 
 
 // The quotes array contains five objects and additional categorization tags.
@@ -52,9 +52,19 @@ function getRandomQuote( quotes ) {
   return quotes[randomNumber];
 };
 
+// The randColor function generates a random number and applies it to the backgroundColor property. 
+
+function randColor() {
+  var r = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var rbgColor = "rgb(" + r + "," + b + "," + g + ")";
+
+  document.body.style.backgroundColor = rbgColor;
+  }
+
 // The printQuote function calls the getRandomQuote function and prints the quote to the page using the example HTML string format.
 // Additional properties are displayed on the screen when present in quote object using conditional statements.
-
 
 function printQuote() {
   var text = getRandomQuote(quotes);
@@ -75,28 +85,19 @@ output += '</p>';
 
   document.getElementById("quote-box").innerHTML = output;
 
+// The randColor function is called in order to generate a random color.
+
+  randColor();
 };
 
-// The randColor function generates a random number and applies it to the backgroundColor property. 
 
-function randColor() {
-  var r = Math.floor(Math.random() * 256);
-  var b = Math.floor(Math.random() * 256);
-  var g = Math.floor(Math.random() * 256);
-  var rbgColor = "rgb(" + r + "," + b + "," + g + ")";
+// The printQuote function is called.
 
-  document.body.style.backgroundColor = rbgColor;
-  }
-
-// The printQuote and randColor functions are called.
-
-randColor();
 printQuote();
 
-// The setInterval method calls the printQuote and randColor function every 15 seconds.
+// The setInterval method calls the printQuote function every 15 seconds.
 
 var timer = setInterval(printQuote, [15000]) 
-var backgroundColor = setInterval(randColor, [15000])
 
 // The 'load-quote' element is referenced and the printQuote function is run when the button is clicked.
 
